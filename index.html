@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Teachers' Day</title>
+  <title>Happy Teachers' Day - IICMR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(to right, #ffecd2, #fcb69f);
-      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+      font-family: 'Roboto', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -16,46 +17,66 @@
       text-align: center;
       padding: 20px;
       color: #333;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
-      color: #8e44ad;
-      font-size: 3em;
+      color: #6a1b9a;
+      font-size: 3.5em;
+      font-family: 'Pacifico', cursive;
       margin-bottom: 10px;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      margin-bottom: 15px;
     }
 
     .message {
       background: #fff;
-      border-radius: 15px;
-      padding: 20px 30px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      max-width: 500px;
-      margin-bottom: 20px;
+      border-radius: 20px;
+      padding: 25px 35px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin-bottom: 25px;
+      line-height: 1.6;
+      font-size: 1.1em;
     }
 
     .footer {
       margin-top: 20px;
-      font-size: 1.1em;
-      color: #8e44ad;
+      font-size: 1.2em;
+      color: #6a1b9a;
+      font-weight: bold;
     }
 
     button {
-      background: #8e44ad;
+      background: #6a1b9a;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 25px;
       border: none;
-      border-radius: 10px;
+      border-radius: 12px;
       font-size: 1em;
       cursor: pointer;
       transition: background 0.3s ease;
     }
 
     button:hover {
-      background: #6c3483;
+      background: #4a148c;
     }
   </style>
 </head>
 <body>
+
+  <!-- Optional Logo -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/IICMR_logo.png/200px-IICMR_logo.png" alt="IICMR Logo" class="logo" />
+
   <h1>🌟 Happy Teachers' Day! 🌟</h1>
 
   <div class="message" id="wish">
@@ -68,7 +89,7 @@
 
   <div class="footer">
     – With love,<br/>
-      MCA Students 🎓
+    MCA Students, IICMR 🎓
   </div>
 
   <script>
@@ -78,7 +99,8 @@
         "Teaching is a work of heart 💗",
         "Grateful for your patience and passion 🌼",
         "You make learning magical ✨",
-        "To the best teacher in the world! 🌍"
+        "To the best teacher in the world! 🌍",
+        "From your proud students at IICMR 🎓"
       ];
       const wishBox = document.getElementById("wish");
       const randomMsg = messages[Math.floor(Math.random() * messages.length)];
