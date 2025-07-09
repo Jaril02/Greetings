@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Teachers' Day</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      color: #8e44ad;
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .message {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #8e44ad;
+    }
+
+    button {
+      background: #8e44ad;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #6c3483;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌟 Happy Teachers' Day! 🌟</h1>
+
+  <div class="message" id="wish">
+    Dear Teacher,<br/>
+    Thank you for being a guiding light, a mentor, and an inspiration.<br/>
+    Your knowledge and kindness shape our future every day.
+  </div>
+
+  <button onclick="showLove()">💖 Send Love 💖</button>
+
+  <div class="footer">
+    – With love,<br/>
+      MCA Students 🎓
+  </div>
+
+  <script>
+    function showLove() {
+      const messages = [
+        "You're our superhero in disguise!",
+        "Teaching is a work of heart 💗",
+        "Grateful for your patience and passion 🌼",
+        "You make learning magical ✨",
+        "To the best teacher in the world! 🌍"
+      ];
+      const wishBox = document.getElementById("wish");
+      const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+      wishBox.innerHTML = randomMsg;
+    }
+  </script>
+</body>
+</html>
